@@ -1,0 +1,472 @@
+// ****************************
+// Variables
+// ****************************
+$base-font-size: 18px;
+$baseline: $base-font-size * 1.5;
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
+
+$note-color-1: #3A9CE2;
+$note-color-2: #8FE23A;
+$note-color-3: #E2543A;
+$note-color-1-shadow: rgba(57, 156, 226, .05);
+$note-color-2-shadow: rgba(143, 226, 57, .05);
+$note-color-3-shadow: rgba(226, 83, 57, .05);
+
+// Color 1: top header background, [ALL] button border and background, text
+$color-1: #4C4C4C;
+
+// Color 2: input borders, text and icons, light text
+$color-2: #929292;
+
+// Color 3: muted text
+$color-3: #CBCBCB;
+
+// Color 4: note border
+$color-4: #B5B5B5;
+
+// Color 5: light backgrounds, HR
+$color-5: #F7F7F7;
+
+// Main accent
+$color-6: #FFCC19;
+
+
+
+// ****************************
+// Breakpoints
+// ****************************
+$small-breakpoint: 'max-width: 500px';
+$medium-breakpoint: 'max-width: 800px';
+
+
+
+// ****************************
+// Mixins
+// ****************************
+@mixin round($radius: 3px) {
+    border-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin center-vertically($position: absolute) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin clearfix() {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+
+
+// ****************************
+// General styles
+// ****************************
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    @include clearfix();
+}
+
+
+
+// ****************************
+// Typography
+// ****************************
+body {
+    font: #{$base-font-size}/1.5 $base-font-family;
+    color: $color-1;
+    -webkit-font-smoothing: antialised;
+}
+
+p {
+    margin: 0 0 $baseline 0;
+
+    a {
+        color: $color-6;
+        text-decoration: none;
+        border-bottom: 1px dotted;
+
+        &:hover {
+            color: $color-1;
+        }
+    }
+}
+
+code {
+    border: 1px solid $color-4;
+    background-color: $color-5;
+    padding: 3px 6px;
+    display: inline-block;
+
+    font-size: .75em;
+}
+
+
+
+// ****************************
+// Forms
+// ****************************
+form {
+    input[type="text"],
+    select {
+        background-color: #fff;
+        border: 3px solid $color-2;
+        outline: none;
+        width: 100%;
+    }
+
+    input[type="text"] {
+        height: $baseline * 3;
+        padding: 0 $baseline;
+
+        @include round(5px);
+
+        &::-webkit-input-placeholder {
+            font-style: italic;
+            font-weight: 300;
+            color: $color-2;
+        }
+
+        &::-moz-placeholder {
+            font-style: italic;
+            font-weight: 300;
+            color: $color-2;
+        }
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        font-size: .88em;
+        height: $baseline * 2;
+        color: $color-2;
+        padding: 0 $baseline / 2;
+
+        cursor: pointer;
+    }
+
+    .radio-group {
+        label {
+            display: inline-block;
+        }
+
+        input[type="radio"]:not(:first-child) {
+            margin-left: $baseline;
+        }
+    }
+
+    .select-wrapper {
+        position: relative;
+        width: $baseline * 10;
+
+        &:after {
+            content: "\f0d7";
+            display: inline-block;
+            right: $baseline / 1.25;
+            font-family: "FontAwesome";
+            color: $color-2;
+
+            @include center-vertically();
+        }
+
+        @media ($medium-breakpoint) {
+            width: 100%;
+        }
+    }
+
+    label {
+        font-size: .88em;
+        margin-bottom: $baseline / 2;
+        display: block;
+    }
+}
+
+
+
+// ****************************
+// Lists
+// ****************************
+.inline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    li {
+        float: left;
+        margin-right: $baseline / 3;
+
+        @media ($medium-breakpoint) {
+            float: none;
+            margin-bottom: $baseline / 2;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+// ****************************
+// Buttons
+// ****************************
+.btn {
+    border: 3px solid $color-1;
+    height: $baseline * 2;
+    padding: 0 $baseline;
+    background-color: transparent;
+    text-transform: uppercase;
+    opacity: .7;
+    outline: none;
+
+    @include round();
+
+    &.btn-filter-blue {
+        color: $note-color-1;
+        border-color: $note-color-1;
+
+        &.btn-active {
+            background-color: $note-color-1;
+        }
+    }
+
+    &.btn-filter-green {
+        color: $note-color-2;
+        border-color: $note-color-2;
+
+        &.btn-active {
+            background-color: $note-color-2;
+        }
+    }
+
+    &.btn-filter-red {
+        color: $note-color-3;
+        border-color: $note-color-3;
+
+        &.btn-active {
+            background-color: $note-color-3;
+        }
+    }
+
+    &.btn-active {
+        background-color: $color-1;
+        color: rgba(255, 255, 255, .7);
+        opacity: 1;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+
+// ****************************
+// HR
+// ****************************
+hr {
+    border: 0;
+    height: 6px;
+    background-color: $color-5;
+    margin-bottom: $baseline;
+}
+
+
+
+// ****************************
+// Header
+// ****************************
+.top-header {
+    background: $color-1;
+    padding: $baseline 0;
+    text-align: center;
+
+    .logo {
+        display: inline-block;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+
+
+// ****************************
+// Options
+// ****************************
+.options {
+    background-color: $color-5;
+    padding: $baseline * 3 0 0 0;
+    margin-bottom: $baseline * 3;
+
+    .filter-container,
+    .sort-container {
+        float: left;
+        margin-right: $baseline;
+        margin-bottom: $baseline;
+
+        @media ($medium-breakpoint) {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .search-wrapper {
+        position: relative;
+        margin-bottom: $baseline * 2;
+
+        &:after {
+            content: "\f002";
+            font-family: "FontAwesome";
+            right: $baseline;
+            color: $color-2;
+
+            @include center-vertically();
+        }
+    }
+
+    @media ($medium-breakpoint) {
+        padding: $baseline * 2 0 $baseline 0;
+    }
+}
+
+
+
+// ****************************
+// Notes
+// ****************************
+.notes-container {
+    margin-bottom: $baseline * 3;
+
+    .notes {
+        margin-left: -$baseline / 2;
+        margin-right: -$baseline / 2;
+        // margin: 0 auto;
+        height: 80%;
+        @include clearfix();
+    }
+
+    .note {
+        float: left;
+        position: relative;
+        width: $baseline * 10;
+        margin: $baseline / 2;
+        max-width: 100%;
+
+        &.note-double {
+            width: $baseline * 21;
+        }
+
+        &.note-triple {
+            width: $baseline * 32;
+        }
+
+        &.stamped {
+            position: absolute;
+            top: $baseline * 5;
+            left: $baseline * 5;
+        }
+
+        @media ($small-breakpoint) {
+            float: none;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .note article {
+        border: 1px solid $color-4;
+        padding: $baseline;
+        position: relative;
+
+        .note-number {
+            margin-bottom: $baseline / 2;
+            font-weight: 300;
+            color: $color-3;
+        }
+
+        .note-title {
+            font-size: 1.125em;
+            margin-bottom: $baseline / 3;
+        }
+
+        .note-date,
+        .note-tags {
+            font-size: .88em;
+            font-style: italic;
+            font-weight: 300;
+            color: $color-2;
+        }
+
+        .note-tags {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: 6px;
+
+            // CSS Triangle
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 $baseline / 1.5 $baseline / 1.5 0;
+            border-color: transparent $color-1 transparent transparent;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .note-blue article {
+        box-shadow: inset 0 0 0 6px $note-color-1-shadow;
+
+        &:after {
+            border-color: transparent $note-color-1 transparent transparent;
+        }
+    }
+
+    .note-green article {
+        box-shadow: inset 0 0 0 6px $note-color-2-shadow;
+
+        &:after {
+            border-color: transparent $note-color-2 transparent transparent;
+        }
+    }
+
+    .note-red article {
+        box-shadow: inset 0 0 0 6px $note-color-3-shadow;
+
+        &:after {
+            border-color: transparent $note-color-3 transparent transparent;
+        }
+    }
+}

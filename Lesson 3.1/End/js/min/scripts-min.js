@@ -1,0 +1,1 @@
+$(function(){var e=$(".notes").isotope({itemSelector:".note"});e.isotope({}),e.isotope({filter:".note-red:first"})});

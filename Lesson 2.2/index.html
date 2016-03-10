@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Isotope</title>
+	<meta name="description" content="Isotope">
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,500,300,400italic,700,700italic">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<header class="top-header">
+		<div class="container">
+			<a href="index.html" class="logo"><img src="img/logo.svg" alt="Logo"></a>
+		</div> <!-- end container -->
+	</header>
+
+	<div class="options">
+		<div class="container">
+			<div class="search-container">
+				<form action="/">
+					<div class="search-wrapper">
+						<input type="text" name="searchNote" id="searchNote" placeholder="Search notes..." />
+					</div> <!-- end search-wrapper -->
+				</form>
+			</div> <!-- end search-container -->
+
+			<div class="filter-container">
+				<form action="/">
+					<label>Filter by color:</label>
+					<ul class="inline">
+						<li><button data-filter="*" id="filter-all" class="btn btn-filter-all btn-active">All</button></li>
+						<li><button data-filter="red" id="filter-red" class="btn btn-filter-red">Red</button></li>
+						<li><button data-filter="blue" id="filter-blue" class="btn btn-filter-blue">Blue</button></li>
+						<li><button data-filter="green" id="filter-green" class="btn btn-filter-green">Green</button></li>
+					</ul>
+				</form>
+			</div> <!-- end filter-container -->
+
+			<div class="sort-container">
+				<form action="/">
+					<label for="sortNotes">Sort by:</label>
+					<div class="select-wrapper">
+						<select class="custom-select" name="sortNotes" id="sortNotes">
+							<option value="note-asc">Note title (asc)</option>
+							<option value="note-desc">Note title (desc)</option>
+							<option value="date-asc">Date (asc)</option>
+							<option value="date-desc">Date (desc)</option>
+						</select>
+					</div> <!-- end select-wrapper -->
+				</form>
+			</div> <!-- end sort-container -->
+		</div> <!-- end container -->
+	</div> <!-- end options -->
+
+	<div class="notes-container">
+		<div class="container">
+			<div class="notes">
+				<div class="note note-blue">
+					<article>
+						<header>
+							<p class="note-number">1</p>
+							<h1 class="note-title">What is this wizardry?</h1>
+							<p class="note-date">Feb 3rd, 2016</p>
+						</header>
+
+						<p>No wizardry! Isotope is used for filtering and sorting layouts.</p>
+
+						<footer>
+							<p class="note-tags">wizardry, filtering, sorting</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-red">
+					<article>
+						<header>
+							<p class="note-number">2</p>
+							<h1 class="note-title">Whereabouts</h1>
+							<p class="note-date">Feb 3rd, 2016</p>
+						</header>
+
+						<p>You can find Isotope <a href="http://isotope.metafizzy.co/">here</a>. You'll also find some docs in there so make sure you read those.</p>
+						<p>Or, you can always watch this entire course and learn everything you need ;)</p>
+
+						<footer>
+							<p class="note-tags">address, docs</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-green">
+					<article>
+						<header>
+							<p class="note-number">3</p>
+							<h1 class="note-title">Install</h1>
+							<p class="note-date">Feb 2nd, 2016</p>
+						</header>
+
+						<p>The easist way to install is to link directly to the Isotope files on cdnjs.</p>
+
+						<footer>
+							<p class="note-tags">install, cdnjs</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-green">
+					<article>
+						<header>
+							<p class="note-number">4</p>
+							<h1 class="note-title">Install</h1>
+							<p class="note-date">Feb 2nd, 2016</p>
+						</header>
+
+						<p>Or, you could download the files directly.</p>
+
+						<footer>
+							<p class="note-tags">install, download</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-green">
+					<article>
+						<header>
+							<p class="note-number">5</p>
+							<h1 class="note-title">Install</h1>
+							<p class="note-date">Feb 2nd, 2016</p>
+						</header>
+
+						<p>Or use bower/npm. Like this:</p>
+						<p><code>bower install isotope</code></p>
+						<p><code>npm install isotope-layout</code></p>
+
+						<footer>
+							<p class="note-tags">install, bower, npm</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-blue note-double">
+					<article>
+						<header>
+							<p class="note-number">6</p>
+							<h1 class="note-title">License</h1>
+							<p class="note-date">Jan 23rd, 2016</p>
+						</header>
+
+						<p>If you want to use Isotope to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary.</p>
+
+						<img src="img/notes/license.jpg" alt="Isotope license">
+
+						<p>Once purchased, you’ll receive a commercial license PDF and be all set to use Isotope in your commercial applications.</p>
+
+						<footer>
+							<p class="note-tags">license</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-red">
+					<article>
+						<header>
+							<p class="note-number">7</p>
+							<h1 class="note-title">In the wild</h1>
+							<p class="note-date">Jan 22nd, 2016</p>
+						</header>
+
+						<p>Isotope is pretty famous. Lots of code-savvy celebrities have used it: Justin Bieber, Tyler Perry, Colonel Sanders.</p>
+
+						<footer>
+							<p class="note-tags">usage</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-blue">
+					<article>
+						<header>
+							<p class="note-number">8</p>
+							<h1 class="note-title">Layouts</h1>
+							<p class="note-date">Jan 13th, 2016</p>
+						</header>
+
+						<p>Apart from filtering and sorting, Isotope can produce some amazing layouts.</p>
+
+						<footer>
+							<p class="note-tags">layouts</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-blue note-triple">
+					<article>
+						<header>
+							<p class="note-number">9</p>
+							<h1 class="note-title">Combination filters</h1>
+							<p class="note-date">Jan 12th, 2016</p>
+						</header>
+
+						<p>Isotope can hide and show item elements with the <code>filter</code> option. Items that match that filter will be shown. Items that do not match will be hidden.</p>
+						<p>Filters can be combined. In addition to filtering for just <code>.red</code> or <code>.tall</code>, you can pass in a filter selector of both: <code>.red.tall</code>.</p>
+
+						<footer>
+							<p class="note-tags">filters, combination</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-blue">
+					<article>
+						<header>
+							<p class="note-number">10</p>
+							<h1 class="note-title">Filter UI</h1>
+							<p class="note-date">Jan 11th, 2016</p>
+						</header>
+
+						<p>The UI for filtering can be pretty much anything. You can use buttons, radio buttons, checkboxes or even select boxes.</p>
+
+						<footer>
+							<p class="note-tags">ui</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-red">
+					<article>
+						<header>
+							<p class="note-number">11</p>
+							<h1 class="note-title">URL hash</h1>
+							<p class="note-date">Jan 10th, 2016</p>
+						</header>
+
+						<p>You can hook filtering into the <code>hashchange</code> event so that Isotope filters can be applied as links.</p>
+
+						<footer>
+							<p class="note-tags">url, hash</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-green">
+					<article>
+						<header>
+							<p class="note-number">12</p>
+							<h1 class="note-title">Multiple sorting</h1>
+							<p class="note-date">Jan 9th, 2016</p>
+						</header>
+
+						<p>To sort by multiple properties, you can set <code>sortBy</code> to an array. For example, <code>sortBy: [ 'color', 'number' ]</code> will sort items by color, <em>then</em> by number.</p>
+
+						<footer>
+							<p class="note-tags">multiple, sorting</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+				<div class="note note-blue">
+					<article>
+						<header>
+							<p class="note-number">13</p>
+							<h1 class="note-title">Item sizing</h1>
+							<p class="note-date">Jan 2nd, 2016</p>
+						</header>
+
+						<p>All sizing and styling of items is handled by your own CSS.</p>
+
+						<footer>
+							<p class="note-tags">sizing, css</p>
+						</footer>
+					</article>
+				</div> <!-- end col -->
+			</div> <!-- end grid -->
+		</div> <!-- end container -->
+	</div> <!-- end notes -->
+
+	<footer>
+		<div class="container">
+			<hr>
+
+			<p>Notes app concept by Adi Purdila.</p>
+			<p>This was made for an Envato Tuts+ Course called "Learn Isotope From Top to Bottom".</p>
+			<p>&copy; 2016</p>
+		</div> <!-- end container -->
+	</footer>
+
+    <!-- JavaScript -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>

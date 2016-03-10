@@ -1,0 +1,1 @@
+$(function(){var t=$(".notes");t.isotope({itemSelector:".note",getSortData:{title:".note-title",number:".note-number parseInt"},sortBy:"number"}),$("#change-note-text").click(function(t){t.preventDefault()}),$("#shuffle-notes").click(function(t){t.preventDefault()}),$("#toggle-stamped").click(function(t){t.preventDefault()})});

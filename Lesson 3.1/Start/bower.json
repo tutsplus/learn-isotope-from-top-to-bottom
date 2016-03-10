@@ -1,0 +1,29 @@
+{
+  "name": "IsotopeJS",
+  "authors": [
+    "Adrian Purdila <adipurdila@gmail.com>"
+  ],
+  "description": "A playground for testing Isotope",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "isotope",
+    "jquery",
+    "normalize"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "isotope": "^2.2.2",
+    "normalize-css": "normalize.css#^3.0.3"
+  }
+}

@@ -1,0 +1,1 @@
+$(function(){var e=$(".notes");e.isotope({itemSelector:".note",getSortData:{number:".note-number parseInt"},sortBy:"number"}),$("#append-items").click(function(e){e.preventDefault()}),$("#prepend-items").click(function(e){e.preventDefault()}),$("#insert-items").click(function(e){e.preventDefault()}),$("#remove-items").click(function(e){e.preventDefault()})});

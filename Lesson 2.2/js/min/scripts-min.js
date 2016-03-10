@@ -1,0 +1,1 @@
+$(function(){$(".notes").isotope({itemSelector:".note",layoutMode:"fitRows",isResizeBound:!0})});

@@ -1,0 +1,1 @@
+$(function(){var t=$(".notes").isotope({itemSelector:".note"});$(".sort-container .btn").on("click",function(o){var e=$(this);o.preventDefault();var a=e.attr("data-layout");$(".sort-container .btn").removeClass("btn-active"),e.addClass("btn-active"),t.isotope({layoutMode:a})})});

@@ -1,0 +1,1 @@
+$(function(){var e=$(".notes"),o=!0;e.isotope({itemSelector:".note"})});

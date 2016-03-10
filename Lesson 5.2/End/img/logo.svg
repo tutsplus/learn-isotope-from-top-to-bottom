@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="105px" height="30px" viewBox="0 0 105 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Notes" sketch:type="MSArtboardGroup" transform="translate(-92.000000, -30.000000)">
+            <g id="Logo" sketch:type="MSLayerGroup" transform="translate(92.000000, 30.000000)">
+                <text id="NOTES" sketch:type="MSTextLayer" font-family="Roboto" font-size="20" font-weight="bold" letter-spacing="1" fill="#FFFFFF">
+                    <tspan x="38" y="22">NOTE</tspan>
+                    <tspan x="92.7226562" y="22">S</tspan>
+                </text>
+                <g sketch:type="MSShapeGroup">
+                    <path d="M11.2554,0.12227027 L-0.0002,9.83578378 L2.6726,24.5722703 L16.6002,29.5944324 L27.8558,19.8805135 L25.183,5.14362162 L11.2554,0.12227027 Z M5.4862,22.1438919 L3.481,11.0913243 L11.9234,3.80537838 L22.3702,7.57159459 L24.3746,18.624973 L15.9326,25.9113243 L5.4862,22.1438919 Z" id="Fill-1" fill="#FFCC19"></path>
+                    <path d="M15.08284,16.1592162 L13.09084,16.1592162 C12.32284,16.1592162 11.84284,16.5970541 11.84284,17.2051622 C11.84284,17.7889459 12.27484,18.2997568 13.13924,18.2997568 C13.90724,18.2997568 14.26644,18.2267838 14.69844,17.8132703 C14.98684,17.5457027 15.08284,17.1321892 15.08284,16.4997568 L15.08284,16.1592162 Z M15.17884,21.4132703 L15.17884,20.343 C14.38684,21.1457027 13.66724,21.5348919 12.29924,21.5348919 C11.00324,21.5348919 9.92284,21.0970541 9.20324,20.3673243 C8.45924,19.6132703 8.07484,18.5186757 8.07484,17.3024595 C8.07484,15.3321892 9.39524,13.5082703 12.46724,13.5082703 L15.08284,13.5082703 L15.08284,13.1673243 C15.08284,11.9758378 14.50684,11.538 13.13924,11.538 C12.13124,11.538 11.69924,11.7812432 11.07484,12.4136757 L8.62724,9.93259459 C9.94684,8.59475676 11.14684,8.18124324 13.33044,8.18124324 C17.02644,8.18124324 19.01884,9.738 19.01884,12.9240811 L19.01884,21.4132703 L15.17884,21.4132703 Z" id="Fill-2" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
